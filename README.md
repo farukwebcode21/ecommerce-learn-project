@@ -11,3 +11,13 @@
 9. How to handle HTTP errors ->http-errors
 
 #### Click here to Nodemon [Nodemon](https://www.npmjs.com/package/nodemon)
+
+```npm i --save-dev nodemon
+
+```
+
+#### Click here to Morgan [Nodemon](https://www.npmjs.com/package/morgan)
+
+```npm i --save-dev morgan
+
+```
