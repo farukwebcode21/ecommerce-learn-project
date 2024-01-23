@@ -12,12 +12,21 @@
 
 #### Click here to Nodemon [Nodemon](https://www.npmjs.com/package/nodemon)
 
-```npm i --save-dev nodemon
+```
+npm i --save-dev nodemon
 
 ```
 
 #### Click here to Morgan [Nodemon](https://www.npmjs.com/package/morgan)
 
-```npm i --save-dev morgan
+```
+npm i --save-dev morgan
+
+```
+
+#### Click here to Body-Parser [body-parser](https://www.npmjs.com/package/body-parser)
+
+```
+npm i body-parser
 
 ```
