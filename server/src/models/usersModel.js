@@ -1,6 +1,21 @@
-const items = [
-  { id: 1, name: "Item 1", description: "Testing Json Data" },
-  { id: 2, name: "Item 2", description: "Testing Json Data" },
-];
+const { Schema, model } = require("mongoose");
 
-module.exports = items;
+const userSchema = new Schema({
+  name: {
+    type: String,
+    required: [true, "User name is required"],
+    trim: true,
+    minlength: [3, " Your name must be theree cracter"],
+    maxlength: [31, "User name length can be maximum 31 character"],
+  },
+  email: {
+    type: String,
+    required: [true, "User email is required"],
+    trim: true,
+    unique: true,
+    lowercase: true,
+  },
+});
+
+const User = model("Users", userSchema);
+module.exports = User;
