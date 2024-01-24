@@ -2,8 +2,8 @@ const express = require("express");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const createError = require("http-errors");
+const userRouter = require("./routers/userRouter");
 const app = express();
-const port = 3000;
 
 // Sample data
 
@@ -11,26 +11,11 @@ app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-let items = [
-  { id: 1, name: "Item 1", description: "Testing Json Data" },
-  { id: 2, name: "Item 2", description: "Testing Json Data" },
-];
+app.use("/api/users", userRouter);
 
 app.get("/", (req, res) => {
   res.status(200).send({
     message: "Server is Running ",
-  });
-});
-
-app.get("/test", (req, res) => {
-  res.status(200).send({
-    items,
-  });
-});
-
-app.get("/api/user", (req, res) => {
-  res.status(200).send({
-    items,
   });
 });
 
